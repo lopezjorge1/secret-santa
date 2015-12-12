@@ -3,6 +3,7 @@ var list = [];
 var copyList = [];
 var pairs = {};
 
+//prompts for names 
 function namesPrompt() {
 	names = prompt("Who is going to be a part of SS?");
 	list = names.split(",");
@@ -11,9 +12,11 @@ function namesPrompt() {
 	}
 }
 
+//This function makes an object where the element in array 1 is the key
+//and the element in array 2 is the value
 function combine(hash,array1,array2) {
 	for (var x = 0; x < array1.length; x++) {
-		if (array1[x] == array2[]) {
+		if (array1[x] == array2[x]) {
 			hash[array1[x]] = array2[x+1];
 		} else {
 			hash[array1[x]] = array2[x];
@@ -22,6 +25,9 @@ function combine(hash,array1,array2) {
 	}
 }
 
+//once everything is completed, and someone clicks the button
+//one of the two lists will be shuffled and it will be verified if
+//identical elements have identical positions
 $(function() {
 	namesPrompt();
 	$(".wrapper button").click(function() {
