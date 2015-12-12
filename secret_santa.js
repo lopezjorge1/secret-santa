@@ -30,16 +30,20 @@ function combine(hash,array1,array2) {
 //identical elements have identical positions
 $(function() {
 	namesPrompt();
-	$(".wrapper button").click(function() {
+	$(".wrapper button").click(function shuffleArray() {
 		for (var i = copyList.length - 1; i > 0; i--) {
 			var j = Math.floor(Math.random() * (i + 1));
         	var temp = copyList[i];
         	copyList[i] = copyList[j];
         	copyList[j] = temp;
         }
+        
+        for (var x = 0; x < list.length; x++) {
+        	if (list[x] == copyList[x]) {
+        		shuffleArray();
+        	}
+        }
         combine(pairs,list,copyList);
-        console.log(copyList);
-        console.log(list);
 	});
 });
 
