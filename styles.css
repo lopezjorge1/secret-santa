@@ -1,0 +1,96 @@
+@font-face {
+	font-family: "Alex";
+	src: url("alex-brush/AlexBrush-Regular.ttf");
+}
+
+html,body {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	background-image: url("christmas.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
+	background-size: cover;
+	overflow: hidden;
+}
+
+h1 {
+	font-family: "Alex";
+	position: absolute;
+	left: 3vw;
+	margin-top: 0;
+	font-size: 8vw;
+}
+
+.input-box {
+	text-align: center;
+}
+
+input{
+	border: none;
+	border-bottom: medium solid #000;
+	width: 28vw;
+	height: 2vw;
+	font-family: "Alex";
+	font-size: 2vw;
+	text-indent: 50%;
+	background-color: rgba(255,255,255,0);
+}
+
+::-webkit-input-placeholder {
+	transform: translate(-15%);
+	color: #000;
+}
+
+input:focus {
+	outline: none;
+}
+
+.list {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 30vw;
+	height: 35vw;
+	background-color: rgba(255,255,255,0.5);
+	border: thin solid #000;
+	border-radius: 1%;
+	overflow: scroll;
+}
+
+ul {
+	/*list-style-type: none;*/
+	line-height: 3vw;
+	font-family: "Alex";
+	font-size: 2vw;
+}
+
+.button {
+	position: absolute;
+	display: block;
+	left: 50%;
+	top: 85%;
+	transform: translate(-50%);
+	width: 15vw;
+	height: 3vw;
+	background-color: rgba(48,92,16,1);
+	text-decoration: none;
+	color: #fff;
+	text-align: center;
+	line-height: 3vw;
+	border-radius: .5vw;
+	letter-spacing: .15vw;
+	font-family: Arial;
+	box-shadow: 0vw .417vw .167vw black;
+}
+
+.button:active {
+	margin-top: .417vw;
+	box-shadow: 0vw 0vw;
+}
